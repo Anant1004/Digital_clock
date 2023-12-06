@@ -75,3 +75,107 @@
 #sec::after{
     content: 'SECONDS';
 }
+
+/* pomodoro web */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f,#30197d);
+    color: #fff;
+    position: relative;
+}
+.container2 {
+    width: min(90%, 500px);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 150%;
+    left: 50%;
+    padding: 2em 2em;
+    background: rgba(235, 0, 255, 0.11);
+    border-radius: 70px;
+    backdrop-filter: blur(10px);
+}
+.container2::before{
+    content: '';
+    width: 200px;
+    height: 200px;
+    background: #f05c5c;
+    position: absolute;
+    border-radius: 50%;
+    right: 400px;
+    top: 204px;
+    z-index: -10;
+}
+.container2::after{
+    content: '';
+    width: 200px;
+    height: 200px;
+    background: #f05c5c;
+    position: absolute;
+    border-radius: 50%;
+    right: -90px;
+    top: -85px;
+    z-index: -10;
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.section-container {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+.btn {
+    border-radius: 15px;
+    padding: 1em 2em;
+    background-color: #3e3f43;
+    color: #a9a7a7;
+}
+.btn-focus {
+    border-radius: 15px;
+    background-color: #f05c5c;
+    color: black;
+}
+.time-btn-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+#time {
+    text-align: center;
+    color: #f05c5c;
+    font-size: 5em;
+    font-weight: 600;
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+#btn-start,#btn-pause {
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    background-color: #f05c5c;
+}
+#btn-reset {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 2em;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
